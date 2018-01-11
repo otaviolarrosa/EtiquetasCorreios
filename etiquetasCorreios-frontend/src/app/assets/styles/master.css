@@ -1,0 +1,291 @@
+@page {
+	size: 21cm 29.7cm;
+}
+body {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	font-family: Arial;
+}
+
+.row {
+	display: block;
+	float: left;
+	margin-top: 5px;
+	position: relative;
+	width: 100%;
+}
+
+.etiqueta {
+	border: 1px solid #e7e7e7;dd
+	display: block;
+	float: left;
+	position: relative;
+	width: 106.36mm;
+	height: 138.11mm;
+}
+.plp {
+	display: block;
+	float: left;
+	position: relative;
+	width: 180.0mm;
+	height: 125.0mm;
+}
+
+.chancela,
+.datamatrix,
+.logo,
+.label-nf,
+.label-contrato,
+.label-peso {
+	display: block;
+	float: left;
+	font-size: 9pt;
+	padding-left: 2mm;
+	position: relative;
+}
+
+.chancela,
+.datamatrix,
+.logo {
+	padding-left: 8mm;
+	height: 25mm;
+	width: 25mm;
+}
+.chancela > img {
+	width: 25mm;
+}
+.datamatrix > img {
+	width: 25mm;
+}
+.logo > img {
+	width: 25mm;
+}
+
+.label-nf {
+	width: 30mm;
+}
+.label-contrato {
+	margin-left: 5mm;
+	width: 39mm;
+}
+.label-peso {
+	width: 23mm;
+}
+
+.label-nf,
+.label-contrato {
+	font-size: 9pt;
+}
+
+.rastreio {
+	float: left;
+	text-align: center;
+	margin: 0 5mm;
+	width: 80mm;
+}
+.rastreio img {
+	width: 80mm;
+}
+.rastreio .label-rastreio {
+	font-size: 11pt;
+	font-weight: bold;
+}
+.services {
+	float: left;
+	font-size: 11pt;
+	font-weight: bold;
+	margin-top: 5mm;
+}
+
+.ar-sign,
+.label-documento {
+	font-size: 9pt;
+	margin-left: 4px;
+}
+.destinatario {
+	border: 1px solid #333;
+	font-size: 11pt;
+	margin-left: 4px;
+	margin-top: 0;
+	height: 46mm;
+	width: 103mm;
+}
+.label-destinatario-container {
+	margin-top: 0;
+}
+.label-destinatario {
+	background-color: #000;
+	color: #fff;
+	display: inline-block;
+	padding: .4mm 2mm;
+}
+.logo-correios {
+	float: right;
+	padding: 1px 1px 0 0;
+}
+
+.dados-destinatario,
+.label-cep,
+.cep {
+	margin-left: 5mm;
+}
+.label-cep {
+	display: inline-block;
+	width: 180px;
+}
+.label-tipo {
+	font-weight: bold;
+}
+.cep,
+.obs {
+	display: block;
+	float: left;
+}
+.cep {
+	width: 170px;
+}
+.cep img {
+	height: 18mm;
+	width: 40mm;
+}
+.obs {
+	font-size: 10pt;
+}
+
+.remetente {
+	font-size: 10pt;
+	margin: 4px 0 8px 0;
+	padding-left: 4px;
+}
+
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+/* PLP */
+.plp * .row {
+	margin-top: 0;
+}
+
+.header-box-plp {
+	height: 10mm;
+}
+.header-box-plp .logo-correios-plp,
+.header-box-plp .correios-title-header-plp {
+	float: left;
+}
+.header-box-plp .logo-correios-plp {
+	width: 35mm;
+}
+.header-box-plp .logo-correios-plp img {
+	height: 8mm;
+}
+.header-box-plp .correios-title-header-plp {
+	text-align: center;
+	font-weight: bold;
+	width: 145mm;
+	padding-top: 3mm;
+}
+
+.data-box {
+	border: 2px solid black;
+}
+.title-box-plp {
+	text-align: center;
+	font-weight: bold;
+	vertical-align: middle;
+	height: 6mm;
+	padding-top: 1mm;
+	display: inline-block;
+	line-height: normal;
+	position: relative;
+}
+
+
+.data-center-content {
+	height: 25mm;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+}
+.data-center-content .data-content,
+.data-center-content .data-barcode-plp {
+	float: left;
+}
+.data-center-content .data-content {
+	font-size: 11pt;
+	width: 108mm;
+	padding-top: 2mm;
+	padding-left: 2mm;
+}
+.data-center-content .data-barcode-plp {
+	width: 70mm;
+	padding-top: 2mm;
+}
+.data-center-content .data-barcode-plp strong {
+	font-size: 11pt;
+}
+.data-center-content .data-barcode-plp img.barcode-img {
+	height: 14mm;
+}
+
+.service-plp {
+	font-size: 11pt;
+	height: 19mm;
+	padding-top: 1mm;
+	padding-left: 2mm;
+}
+
+.service-plp .col-1,
+.service-plp .col-2,
+.service-plp .col-3,
+.service-plp .col-4 {
+	float: left;
+}
+.service-plp .col-1 {
+	width: 33mm;
+}
+.service-plp .col-2 {
+	width: 33mm;
+}
+.service-plp .col-3 {
+	width: 42mm;
+}
+.service-plp .col-4 {
+	width: 70mm;
+}
+
+.service-line {
+	height: 10mm;
+	margin-bottom: 2mm;
+}
+
+.date-receipt {
+	height: 8mm;
+}
+.sign-correios {
+	border-top: 2px solid black;
+	padding-top: 1mm;
+}
+
+.cut-line {
+	display: block;
+	border-bottom: 2px dashed black;
+	position: relative;
+	margin-top: 2mm;
+	margin-bottom: 2mm;
+}

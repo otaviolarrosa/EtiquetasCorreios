@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="123px" height="50px" viewBox="0 0 123 50" version="1.1">
+<title>64045000</title>
+<g id="canvas" >
+<rect x="0" y="0" width="123px" height="50px" fill="white" />
+<g id="barcode" fill="black">
+<rect x="0" y="0" width="2px" height="50px" />
+<rect x="3" y="0" width="1px" height="50px" />
+<rect x="6" y="0" width="1px" height="50px" />
+<rect x="11" y="0" width="2px" height="50px" />
+<rect x="15" y="0" width="3px" height="50px" />
+<rect x="19" y="0" width="1px" height="50px" />
+<rect x="22" y="0" width="2px" height="50px" />
+<rect x="26" y="0" width="1px" height="50px" />
+<rect x="29" y="0" width="3px" height="50px" />
+<rect x="33" y="0" width="1px" height="50px" />
+<rect x="36" y="0" width="3px" height="50px" />
+<rect x="40" y="0" width="2px" height="50px" />
+<rect x="44" y="0" width="2px" height="50px" />
+<rect x="48" y="0" width="1px" height="50px" />
+<rect x="51" y="0" width="3px" height="50px" />
+<rect x="55" y="0" width="2px" height="50px" />
+<rect x="58" y="0" width="3px" height="50px" />
+<rect x="63" y="0" width="1px" height="50px" />
+<rect x="66" y="0" width="1px" height="50px" />
+<rect x="69" y="0" width="3px" height="50px" />
+<rect x="73" y="0" width="2px" height="50px" />
+<rect x="77" y="0" width="1px" height="50px" />
+<rect x="80" y="0" width="3px" height="50px" />
+<rect x="84" y="0" width="2px" height="50px" />
+<rect x="88" y="0" width="1px" height="50px" />
+<rect x="91" y="0" width="3px" height="50px" />
+<rect x="95" y="0" width="2px" height="50px" />
+<rect x="99" y="0" width="1px" height="50px" />
+<rect x="102" y="0" width="2px" height="50px" />
+<rect x="106" y="0" width="3px" height="50px" />
+<rect x="110" y="0" width="2px" height="50px" />
+<rect x="115" y="0" width="3px" height="50px" />
+<rect x="119" y="0" width="1px" height="50px" />
+<rect x="121" y="0" width="2px" height="50px" />
+
+</g></g>
+</svg>
