@@ -13,8 +13,8 @@ namespace EtiquetasCorreios.Api.Controllers
     [Route("api/[controller]")]
     public class Code128Controller : Controller
     {
-        // GET: api/values
-        [HttpGet]
+        // POST: api/values
+        [HttpPost]
         public List<string> Get(List<string> valores)
         {
             var retorno = new List<string>();
