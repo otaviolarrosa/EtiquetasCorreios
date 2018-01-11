@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ZXing;
 
@@ -17,26 +15,31 @@ namespace EtiquetasCorreios.Api.Controllers
     {
         // GET: api/values
         [HttpGet]
-        public string Get(string valor)
+        public List<string> Get(List<string> valores)
         {
-            BarcodeWriterPixelData writer = new BarcodeWriterPixelData() { Format = BarcodeFormat.CODE_128 };
-            writer.Options.PureBarcode = true;
-            var pixelData = writer.Write(valor);
-            using (var bitmap = new Bitmap(pixelData.Width, pixelData.Height, PixelFormat.Format32bppRgb))
+            var retorno = new List<string>();
+            valores.ForEach(valor =>
             {
-                var stream = new MemoryStream();
-                var bitmapData = bitmap.LockBits(new Rectangle(0, 0, pixelData.Width, pixelData.Height), ImageLockMode.WriteOnly, PixelFormat.Format32bppRgb);
-                try
+                BarcodeWriterPixelData writer = new BarcodeWriterPixelData() { Format = BarcodeFormat.CODE_128 };
+                writer.Options.PureBarcode = true;
+                var pixelData = writer.Write(valor);
+                using (var bitmap = new Bitmap(pixelData.Width, pixelData.Height, PixelFormat.Format32bppRgb))
                 {
-                    System.Runtime.InteropServices.Marshal.Copy(pixelData.Pixels, 0, bitmapData.Scan0, pixelData.Pixels.Length);
+                    var stream = new MemoryStream();
+                    var bitmapData = bitmap.LockBits(new Rectangle(0, 0, pixelData.Width, pixelData.Height), ImageLockMode.WriteOnly, PixelFormat.Format32bppRgb);
+                    try
+                    {
+                        System.Runtime.InteropServices.Marshal.Copy(pixelData.Pixels, 0, bitmapData.Scan0, pixelData.Pixels.Length);
+                    }
+                    finally
+                    {
+                        bitmap.UnlockBits(bitmapData);
+                    }
+                    bitmap.Save(stream, ImageFormat.Png);
+                    retorno.Add(Convert.ToBase64String(stream.ToArray()));
                 }
-                finally
-                {
-                    bitmap.UnlockBits(bitmapData);
-                }
-                bitmap.Save(stream, ImageFormat.Png);
-                return Convert.ToBase64String(stream.ToArray());
-            }
+            });
+            return retorno;
         }
     }
 }
