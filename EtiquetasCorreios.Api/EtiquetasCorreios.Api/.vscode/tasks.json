@@ -9,7 +9,7 @@
                 "build",
                 "${workspaceFolder}/EtiquetasCorreios.Api.csproj"
             ],
-            "problemMatcher": "$msCompile"
+            "problemMatcher": "$msCompile" 
         }
     ]
 }
